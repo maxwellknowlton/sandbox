@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>                          <!-- no language tag, meta tag additional things needed
+                                    comments also taken off but I've read since that they
+                                    are encouraged to explain things or provide additional info-->
+<head>
+    <title>My First HTML Page</title>
+<style>
+h1 {                           /* would be useful to better categorize with div tags and ids to 
+                                    personalize and organize css */
+    color:#00008B;
+    text-align:center;
+    border:10px solid #00008B;
+    border-radius:50px;         /* defines radii of the outer border edge "curves border corners" */
+    padding:30px
+}
+br {
+    display:block;
+    margin:15px 0;
+}
+ul {
+   list-style:none;            /* takes away dots from the list */
+}
+img {
+    width:200px;
+    height:300px;
+}
+h2 {
+    color:#00008B;
+    text-align:center;
+}  
+button {
+    padding:20px;
+    text-align:center;
+    font-size:20px;
+    font-family:verdana;
+    border-radius:50%;
+    width:126px;                /* tried to set this based on window in the web document window, without the 
+                                    console window and other pieces it looks off centered, as well as the table 
+                                    information with the first column
+
+                                    in the future would try to set sizes with relative lengths - em, rem, viewport
+                                */    
+    background-color:#ADD8E6;            
+}
+button:hover {                  /* when the mouse hovers over the button */
+    background-color:#00008B;
+    border:none;
+    color:white;
+    font-weight:bold;
+    font-size:160%;
+}
+a {                         /* inherit causes element to take style from parent element
+                                should have specified more, but I believe since the button
+                                styles are listed prior to this, their style is a higher priority
+                                so it is not affected????? 
+                            */
+    color:inherit;
+    text-decoration:inherit;
+}
+caption {
+    text-align:center;
+    font-size:24px;
+    text-decoration:underline;
+    margin: 10px
+}
+table, th, td {
+    width:100%;
+    font-size:14px;
+    text-align:center;
+    border:2px solid black;
+    border-collapse: collapse;  /* necessary for neatness, otherwise every input has its own box like a big maze */
+    padding:10px
+}
+tr:nth-child(even) {            /* highlights every other row for better viewability */
+    background-color:#D3D3D3
+}
+address {
+    text-align:right;
+    text-decoration:inherit;
+}
+</style>
+<body>
+    <h1>My First HTML Page</h1>   
+        <p> <b>Hello, World!</b> and welcome to my webpage. I'm excited for you to be here.  This is a <u>simple</u>, yet effective way to show what I have learned in my HTML courses. These things include:
+            <ul>
+                <li>Images</li>
+                <li>Buttons</li>
+                <li>and a Table!</li>
+            </ul>    
+        </p>Enjoy my webpage and everything it has to offer.</p>
+        <br>                   <!--title is tooltip - text when mouse hovers over the img-->
+                                <!--alt text shows if image does not load-->
+        <img src="https://yorkdevtraining.com/images/york-solutions/stuffed-animals-14818213.jpg"
+            alt="Stuffed Animals";      
+            title="Stuffed Animals">
+            
+        <img src="https://yorkdevtraining.com/images/york-solutions/thumb16.jpg"
+            alt="Teddy Bear";
+            title="Teddy Bear">
+        <br>
+    <h2>Search Engine Menu</h2>    
+        <button>                                            <!-- button tag defines clickable button with text showing
+                                                                as "Google" inbetween the tag -->
+            <a href="https://www.google.com"                
+            target="_blank">Google                          <!-- anchor tag is href is the destination or link
+                                                                _blank takes the user to a new tab-->
+            </a>    
+        </button>
+        <button>  
+            <a href="https://www.bing.com/" 
+            target="_blank">Bing
+            </a>
+        </button>
+        <button>  
+            <a href="https://www.yahoo.com/" 
+            target="_blank">Yahoo
+            </a>
+        </button>
+        <button>  
+            <a href="https://www.ask.com/" 
+            target="_blank">Ask
+            </a>
+        </button>  
+    <table>                         <!--table caption is title, table header, table row, table data-->
+        <caption>Member Information</caption>    
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Birthmonth</th>
+        <tr>
+            <td>John</td>
+            <td>Johnson</td>
+            <td>Blaine</td>
+            <td>MN</td>
+            <td>July</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Williams</td>
+            <td>Fort Myers</td>
+            <td>FL</td>
+            <td>April</td>
+        </tr>
+        <tr>
+            <td>Sean</td>
+            <td>Smith</td>
+            <td>Albany</td>
+            <td>NY</td>
+            <td>September</td>
+        </tr>
+        <tr>
+            <td>Meghan</td>
+            <td>Reynolds</td>
+            <td>Fargo</td>
+            <td>ND</td>
+            <td>February</td>
+        </tr>
+        <tr>
+            <td>Stephen</td>
+            <td>Richardson</td>
+            <td>Wayne</td>
+            <td>NE</td>
+            <td>May</td>
+        </tr>
+    </table>    
+        <br>
+            <address>           <!-- address is contact information for nearest article or body element ancestor-->
+                <pre>                     <!--The pre element represents a block of preformatted text, 
+                                    in which structure is represented by typographic conventions rather than by elements.
+
+                -->
+                    M. Knowlton
+                    <a href="https://www.w3schools.com/"
+                    target="_blank">Website</a>             
+                    <a href=tel:123-456-7890>Phone</a>
+                    <a href=mailto:email@hotmail.com>Email</a>
+
+                    <a href=#>Back to top</a> 
+                </pre>
+            </address>    
+</body>
+</html>
